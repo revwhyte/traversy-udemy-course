@@ -1,3 +1,9 @@
-# traversy-udemy-course
-Developed during PHP MVC course, from Brad Traversy (Traversy Media)
-WIP
+
+# MVC Framework (powered by Brad Traversy's Udemy Course
+
+This framework was developed during PHP MVC course, from Brad Traversy (Traversy Media)
+
+## How to use
+
+1. First, edit the .htaccess file into /mvc/public folder
+2. Change the `/[mvc]/public` part (inside brackets) on `RewriteBase /mvc/public` line to the name your folder is going to have
