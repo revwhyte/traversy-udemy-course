@@ -14,7 +14,7 @@ This framework was developed during PHP MVC course, from Brad Traversy (Traversy
 * Don't worry about that `push.sh` file, it is your true savior while you're commiting your project. To use it, run at your terminal `./push.sh "{message}"` and it will run 3 commands for you (you're welcome ;):
 ```
 git add .
-git commit -m "{message"
+git commit -m "{message}"
 git push
 ```
 Have fun!
