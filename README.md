@@ -1,22 +1,18 @@
 
-# MVC Framework
+# SharePosts
 
-This framework was developed during PHP MVC course, from Brad Traversy (Traversy Media)
+Application developed using the framework created following the course, from Brad Traversy
 
 ## How to use
 
-* Edit the .htaccess file into `/{mvc}/public` folder. Change the `/{mvc}/public` part (inside curly braces) on `RewriteBase /mvc/public` line to the name your folder is going to have
-* Create `models` folder, inside `mvc` folder, and create your models inside of it
-* If you want to create helper functions (without creating a class for it), use `/{mvc}/app/helpers` folder
-* There's a `style.css` file for general style, right in `/{mvc}/public/css` folder
-* There's also a `main.js` file for general JS interaction, right at `/{mvc}/public/js` folder
-* You can lay down your images inside `/{mvc}/public/img` folder, and use them easily
-* Don't worry about that `push.sh` file, it is your true savior while you're commiting your project. To use it, run at your terminal `./push.sh "{message}"` and it will run 3 commands for you - you're welcome :wink:
+* Using PHPMyAdmin (or any other db tool), create a database called `shareposts`, and tables called `users` and `posts` (use the schema found on `main` branch, `schema` folder, if you want to be practical)
+* Put the `shareposts` folder inside your local server, and run it with the following URL: `http://localhost/shareposts`
+* Don't worry about that `push.sh` file, it is your true savior while you're commiting your project. To use it, run at your terminal `./push.sh "{message}" {branch}` and it will run 3 commands for you - you're welcome :wink:
 
-```
+```shell
 git add .
 git commit -m "{message}"
-git push
+git push origin {branch}
 ```
 
 Have fun!
