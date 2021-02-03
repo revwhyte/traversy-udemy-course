@@ -1,15 +1,15 @@
 <?php
     // DB Params - set your data
-    define('DB_HOST', 'us-cdbr-east-03.cleardb.com');
-    define('DB_USER', 'bac2034087c05c');
-    define('DB_PASS', '3a813d33');
-    define('DB_NAME', 'fstmmqdj6zwbxrlg');
+    define('DB_HOST', 'us-cdbr-east-02.cleardb.com');
+    define('DB_USER', 'bddf00b65c763c');
+    define('DB_PASS', '27253fe1');
+    define('DB_NAME', 'heroku_5c197a99a1c9295');
 
     // app root
     define('APPROOT', dirname(dirname(__FILE__)));
 
     // URL root
-    define('URLROOT', 'http://localhost/shareposts');
+    define('URLROOT', 'https://shareposts-mvc-framework.herokuapp.com/');
 
     // Site Name
     define('SITENAME', 'SharePosts');
