@@ -9,7 +9,7 @@
     define('APPROOT', dirname(dirname(__FILE__)));
 
     // URL root
-    define('URLROOT', 'https://shareposts-mvc-framework.herokuapp.com/');
+    define('URLROOT', 'https://shareposts-mvc-framework.herokuapp.com');
 
     // Site Name
     define('SITENAME', 'SharePosts');
