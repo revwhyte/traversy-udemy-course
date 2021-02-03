@@ -18,6 +18,7 @@
 
         public function __construct() {
             // set DSN
+            // check this if doesnt work
             $dsn = "mysql:host=$this->host;dbname=$this->dbname";
             $options = array(
                 PDO::ATTR_PERSISTENT => true,
