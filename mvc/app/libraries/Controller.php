@@ -10,11 +10,17 @@
             return new $model();
         }
 
+        // old
+        public function form($form) {
+            require_once "../app/forms/$form.php";
+
+            return new $form();
+        }
+
         public function view($view, $data = []) {
             if(file_exists("../app/views/$view.php")) {
                 require_once "../app/views/$view.php";
             } else {
-                // recommendation: create 404 page
                 die('View not found');
             }
         }

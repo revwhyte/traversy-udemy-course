@@ -5,7 +5,7 @@
      * URL FORMAT - /controller/method/params
      */
     class Core {
-        protected $currentController = 'Pages';
+        protected $currentController = 'PageController';
         protected $currentMethod = 'index';
         protected $params = [];
 
@@ -13,7 +13,8 @@
             $url = $this->getUrl();
 
             // get controller
-            $controller = isset($url[0]) ? ucwords($url[0]) : 'Pages';
+            $controller = isset($url[0]) ? ucwords($url[0]) : 'PageController';
+            $controller .= "Controller";
             unset($url[0]);
 
             // get method
@@ -49,7 +50,10 @@
                 $url = rtrim($_GET['url'], '/');
                 $url = filter_var($url, FILTER_SANITIZE_URL);
                 $url = explode('/', $url);
+
                 return $url;
             }
+            
+            return ['PageController'];
         }
     }

@@ -7,21 +7,21 @@
         }
 
         // register user
-        public function register($data) {
-            $this->db->query('INSERT INTO users(name, email, password) VALUES (:name, :email, :password)');
+        public function register(UserForm $data) {
+            $this->db->query('INSERT INTO user(name, email, password) VALUES (:name, :email, :password)');
             
             // bind value
-            $this->db->bind(':name', $data['name']);
-            $this->db->bind(':email', $data['email']);
-            $this->db->bind(':password', $data['password']);
+            $this->db->bind(':name', $data->get_name());
+            $this->db->bind(':email', $data->get_email());
+            $this->db->bind(':password', $data->get_password());
 
             // execute
             return $this->db->execute() ? true : false;
 
         }
 
-        public function findUserByEmail($email) {
-            $this->db->query('SELECT * FROM users WHERE email = :email');
+        public function find_user_by_email(string $email) {
+            $this->db->query('SELECT * FROM user WHERE email = :email');
             $this->db->bind(':email', $email);
 
             $row = $this->db->single();
@@ -29,16 +29,16 @@
             return $this->db->rowCount() > 0;
         }
 
-        public function getUserById($id) {
-            $this->db->query('SELECT * FROM users WHERE id = :id');
+        public function get_user_by_id(int $id) {
+            $this->db->query('SELECT * FROM user WHERE id = :id');
 
             $this->db->bind(':id', $id);
 
             return $this->db->single();
         }
 
-        public function login($email, $password) {
-            $this->db->query('SELECT * FROM users WHERE email = :email');
+        public function login(string $email, string $password) {
+            $this->db->query('SELECT * FROM user WHERE email = :email');
             $this->db->bind(':email', $email);
 
             $row = $this->db->single();

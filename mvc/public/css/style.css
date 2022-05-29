@@ -1,1 +1,4 @@
 /* Common styles */
+.obrigatorio {
+  color: #dc3545 !important;
+}
